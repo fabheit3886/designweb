@@ -1,4 +1,3 @@
-// 1. Objeto contendo os dados de todos os projetos
 const projectsData = {
     scoreboard: {
         number: "01",
@@ -26,7 +25,6 @@ const projectsData = {
     }
 };
 
-// 2. Seleção dos elementos do painel principal
 const mainNumber = document.querySelector('#project-main .project-number');
 const mainTitle = document.getElementById('project-title');
 const mainDesc = document.getElementById('project-description');
@@ -34,21 +32,17 @@ const mainTechContainer = document.getElementById('project-technologies');
 const mainLink = document.getElementById('project-link');
 const mainGithub = document.getElementById('project-github');
 
-// 3. Seleção dos botões secundários
 const secondaryButtons = document.querySelectorAll('.project-secondary');
 
-// 4. Função para atualizar as informações do projeto principal
 function updateMainProject(projectKey) {
     const project = projectsData[projectKey];
 
     if (!project) return;
 
-    // Efeito suave de transição (opcional)
     const mainCard = document.getElementById('project-main');
     mainCard.style.opacity = '0.4';
 
     setTimeout(() => {
-        // Atualiza textos e links
         mainNumber.textContent = project.number;
         mainTitle.textContent = project.title;
         mainDesc.textContent = project.description;
