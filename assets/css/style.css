@@ -494,9 +494,9 @@ header {
 }
 
 .detail h4 {
-    font-family: var(--font-mono);
+    font-family: "Montserrat";
     font-size: 0.8rem;
-    color: var(--gold);
+    color: var(--text-light);
     margin-bottom: 0.2rem;
 }
 
