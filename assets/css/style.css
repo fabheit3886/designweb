@@ -533,7 +533,18 @@ footer {
     color: var(--red);
 }
 
+.project-secondary {
+    transition: all 0.3s ease;
+}
 
+.project-secondary.active {
+    border-color: var(--gold);
+    background-color: rgba(200, 149, 32, 0.1);
+}
+
+#project-main {
+    transition: opacity 0.2s ease-in-out;
+}
 
 
 @media (max-width: 900px) {
