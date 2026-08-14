@@ -11,16 +11,16 @@ const projectsData = {
         number: "02",
         title: "CAJUFESTIVAL",
         description: "Plataforma web interativa desenvolvida para apresentação e gestão do evento CajuFestival.",
-        technologies: ["HTML", "SASS", "JS"],
-        link: "https://cajufestival.vercel.app/",
-        github: "https://github.com/fabheit3886/cajufestival"
+        technologies: ["HTML", "CSS", "JS"],
+        link: "https://integrador-hotsite-eventos-75vi.vercel.app/",
+        github: "https://github.com/fabheit3886/integrador-hotsite-eventos"
     },
     portfolio: {
         number: "03",
         title: "PORTFOLIO",
         description: "Meu portfólio pessoal apresentando minha trajetória, competências e projetos na área de tecnologia.",
         technologies: ["HTML", "SCSS", "JS"],
-        link: "#",
+        link: "https://designweb-beta.vercel.app/",
         github: "https://github.com/fabheit3886/portfolio"
     }
 };
