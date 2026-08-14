@@ -1,0 +1,305 @@
+@use 'design' as *;
+
+// CABEÇALHO & NAV
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .nav-header ul {
+    display: flex;
+    gap: 2rem;
+    font-family: $font-mono;
+    font-size: 0.9rem;
+
+    a:hover {
+      color: $primary-red;
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    img {
+      width: 20px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// SEÇÃO HERO
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+
+  .hero-text {
+    max-width: 600px;
+
+    h1 {
+      align-self: stretch;
+      color: #FFF;
+      font-family: "Bebas Neue";
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    h3 {
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    p {
+      color: $text-muted;
+      margin-bottom: 1rem;
+    }
+
+    .button {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .hero-perfil img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid $primary-red;
+  }
+}
+
+// TÍTULOS DE SEÇÃO
+.section-header,
+.area-text {
+  text-align: left;
+  margin-bottom: 2.5rem;
+
+  h1 {
+    color: #FFF;
+    font-family: "Bebas Neue";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-self: stretch;
+  }
+
+  h2 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-self: stretch;
+  }
+
+  p,
+  h3 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+// ÁREAS E MOSAICOS (GRIDS)
+section {
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.skills-mosaic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+
+  .skill-card {
+    text-align: center;
+    font-family: $font-mono;
+
+    &.skill-html,
+    &.skill-css,
+    &.skill-sql {
+      background-color: $primary-yellow;
+      color: #000;
+      border: none;
+    }
+  }
+}
+
+.projects-mosaic {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+
+  .project-main {
+    background-color: $primary-red;
+    padding: 2.5rem;
+    border-radius: 8px;
+    position: relative;
+
+    .project-number {
+      font-family: $font-mono;
+      opacity: 0.6;
+    }
+
+    h3 {
+      align-self: stretch;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .project-technologies {
+      font-family: $font-mono;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .project-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .project-secondary {
+    background-color: $bg-card;
+    border: 1px solid $bg-card-border;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $primary-red;
+    }
+
+    h3 {
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      align-self: stretch;
+    }
+  }
+}
+
+// SOBRE MIM & FOOTER
+.about-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+
+  .about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+
+    h4 {
+      font-family: $font-mono;
+      font-size: 0.8rem;
+      color: $primary-red;
+    }
+
+    p {
+      color: $text-muted;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  border-top: 1px solid $bg-card-border;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  color: $text-muted;
+}
+
+// RESPONSIVIDADE (MOBILE)
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+
+    .button {
+      justify-content: center;
+    }
+  }
+
+  .projects-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+
+    .about-details {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

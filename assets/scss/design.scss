@@ -1,0 +1,112 @@
+
+// VARIÁVEIS (DESIGN TOKENS)
+$bg-dark: #0a0e11;
+$bg-card: #11171d;
+$bg-card-border: #1a232c;
+
+$primary-red: #d92b4b;
+$primary-yellow: #c89520;
+
+$text-main: #ffffff;
+$text-muted: #94a3b8;
+
+$font-bebas: 'Bebas Neue', sans-serif;
+$font-mono: 'IBM Plex Mono', monospace;
+$font-montserrat: 'Montserrat', sans-serif;
+
+// RESET & BASE
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-dark;
+  color: $text-main;
+  font-family: $font-montserrat;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+//BOTÕES E COMPONENTES
+.botao, .btn-project, .about-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: $primary-red;
+  color: $text-main;
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-github {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border: 1px solid $primary-red;
+  color: $text-main;
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: rgba($primary-red, 0.15);
+  }
+}
+
+.area-card, .skill-card {
+  background-color: $bg-card;
+  border: 1px solid $bg-card-border;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    border-color: $primary-red;
+    transform: translateY(-4px);
+  }
+}
+
+.area-card--active {
+  background-color: $primary-red;
+  border-color: $primary-red;
+
+  &:hover {
+    border-color: lighten($primary-red, 10%);
+  }
+}
