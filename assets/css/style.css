@@ -528,9 +528,9 @@ footer {
     padding: 2.5rem 8%;
     max-width: 1300px;
     margin: 0 auto;
-    border-top: 1px solid var(--red);
+    border-top: 1px solid #11171d;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--red);
 }
 
 
